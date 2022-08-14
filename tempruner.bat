@@ -1,0 +1,2 @@
+type credit.txt
+pause
