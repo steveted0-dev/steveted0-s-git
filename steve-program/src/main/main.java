@@ -1,5 +1,9 @@
 package main;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
 import javax.swing.*;
 
 public class main {
@@ -9,66 +13,20 @@ public class main {
 		Frame f = new Frame();
 		
 		f.setTitle("Frame Test");
-			
+		f.addWindowListener((WindowListener) new EventHandler());
 		f.setSize(300,300);
 		f.setVisible(true);
+
 	}
 
 }
-public class WindowEventEx extends Frame implements WindowListener{
-    public WindowEventEx(){
-	super("windowEvent 테스트");
-		
-	add(exit);
-	setBounds(300,300,200,200);
-	setVisible(true);
-		
-	addWindowListener(this);
-		
-    }
-	
-    public static void main(String[] args) {
-	new WindowEventEx();
-    }
+class EventHandler extends WindowAdapter {
 
-    @Override
-    public void windowActivated(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-		
-    }
+	 @Override
+	 public void windowClosing(WindowEvent we) {
+	  we.getWindow().setVisible(false);
+	  we.getWindow().dispose();
+	  System.exit(0);
+	 }
 
-    @Override
-    public void windowClosed(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-    }
-
-    @Override
-    public void windowClosing(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-	System.exit(0); //프로그램 종료
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-		
-    }
-
-    @Override
-    public void windowDeiconified(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-		
-    }
-
-    @Override
-     public void windowIconified(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-		
-    }
-
-    @Override
-    public void windowOpened(WindowEvent arg0) {
-	// TODO Auto-generated method stub
-		
-    }
-}
+	} 
