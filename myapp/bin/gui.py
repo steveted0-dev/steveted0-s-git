@@ -7,7 +7,7 @@ main = Tk()
 
 lolb =  Label(main, text="loading...")
 
-porg = ttk.Progressbar(main, maximum=100, mode="determinate")
+porg = ttk.Progressbar(main, maximum=100, mode="indeterminate")
 porg.start(10)
 
 lolb.pack()
