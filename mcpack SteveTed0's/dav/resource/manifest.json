@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+      "description": "SteveTed0's pack",
+      "name": "Resource",
+      "uuid":"",
+      "version": [1, 0, 0],
+      "min_engine_version": [1, 17, 1]
+     },
+    "modules": [
+      {
+        "description": "SteveTed0's pack-resource",
+        "type": "resources",
+        "uuid": "",
+        "version": [1, 0, 0]
+      }
+    ]
+   }
