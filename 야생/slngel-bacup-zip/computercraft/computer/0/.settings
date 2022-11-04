@@ -1,3 +1,0 @@
-{
-  [ "bios.strict_globals" ] = true,
-}
