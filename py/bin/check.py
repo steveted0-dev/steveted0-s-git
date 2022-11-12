@@ -3,5 +3,5 @@ def check(sload, sstart):
 	j=c.readline()
 	if j == "steveted0check":
 		if sload == "load":
-			import load as start
+			import load.py as start
 			start.start()
